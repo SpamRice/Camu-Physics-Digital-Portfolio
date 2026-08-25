@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Berkshire+Swash&family=Caveat:wght@400..700&family=Lilita+One&family=Lobster&family=Nanum+Pen+Script&family=Share+Tech&display=swap');
+
+
+/* ==========================================
+   COLORS
+========================================== */
+
+:root {
+    --pink: #e9a9b5;
+    --light-pink: #f1cbd0;
+    --brown: #5b3035;
+    --yellow: #f2b65d;
+    --white: #f7f7f5;
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    min-height: 100%;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background: var(--pink);
+
+    color: var(--brown);
+
+    font-family: 'Arimo', sans-serif;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.topbar {
+    width: 100%;
+    height: 155px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    border-bottom: 8px solid var(--brown);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.nav-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 0 20px;
+
+    background: var(--pink);
+
+    color: var(--brown);
+
+    text-decoration: none;
+
+    font-family: 'Caveat', cursive;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    border-right: 7px solid var(--brown);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.nav-item:last-child {
+    border-right: none;
+}
+
+
+.nav-item:hover {
+    background: var(--light-pink);
+}
+
+
+/* ==========================================
+   ACTIVE HEADER
+========================================== */
+
+.nav-item.active {
+    background: var(--white);
+
+    border-bottom: 8px solid var(--white);
+
+    margin-bottom: -8px;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+/* ==========================================
+   MAIN PAGE
+========================================== */
+
+.section-page {
+    background: var(--pink);
+}
+
+
+.page-content {
+    width: 100%;
+
+    min-height: calc(100vh - 155px);
+
+    background: var(--white);
+
+    padding: 75px 9% 100px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.profile-layout {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 100px;
+
+    padding: 35px 0 70px;
+}
+
+
+.profile-picture {
+    width: 340px;
+    height: 340px;
+
+    flex-shrink: 0;
+
+    background: var(--light-pink);
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.profile-picture img {
+    width: 125%;
+    height: 125%;
+
+    max-width: none;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.profile-info {
+    flex: 1;
+}
+
+
+.profile-info h1 {
+    font-family: 'Berkshire Swash', cursive;
+
+    font-size: 75px;
+
+    font-weight: 400;
+
+    margin-bottom: 45px;
+}
+
+
+.info-item {
+    margin-bottom: 27px;
+}
+
+
+.info-label {
+    display: block;
+
+    font-family: 'Lilita One', sans-serif;
+
+    font-size: 27px;
+
+    margin-bottom: 7px;
+}
+
+
+.info-item p {
+    font-family: 'Arimo', sans-serif;
+
+    font-size: 25px;
+
+    line-height: 1.4;
+}
+
+
+.long-text {
+    max-width: 750px;
+}
+
+
+/* ==========================================
+   SCHOOL BACKGROUND
+========================================== */
+
+.school-section {
+    width: 100%;
+
+    padding-top: 55px;
+
+    border-top: 6px solid var(--brown);
+}
+
+
+.school-section h2 {
+    font-family: 'Berkshire Swash', cursive;
+
+    font-size: 58px;
+
+    font-weight: 400;
+
+    margin-bottom: 35px;
+}
+
+
+.school-item {
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+
+    padding: 22px 0;
+
+    border-bottom: 4px solid var(--brown);
+
+    font-size: 24px;
+}
+
+
+.school-level {
+    font-family: 'Lilita One', sans-serif;
+
+    font-size: 27px;
+}
+
+
+.school-item p {
+    font-family: 'Arimo', sans-serif;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   DUCK
+========================================== */
+
+.duck-decoration {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-end;
+
+    margin-top: 50px;
+
+    padding-right: 20px;
+}
+
+
+.duck-decoration img {
+    width: 220px;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* ==========================================
+   DIGITAL TASKS
+========================================== */
+
+.tasks-section {
+    width: 100%;
+
+    min-height: 600px;
+}
+
+
+.tasks-section h1 {
+    font-family: 'Berkshire Swash', cursive;
+
+    font-size: 75px;
+
+    font-weight: 400;
+
+    margin-bottom: 55px;
+}
+
+
+.digital-task-card {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.digital-task-link {
+    display: block;
+
+    width: 100%;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.digital-task-link:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 0 var(--brown);
+}
+
+
+.digital-task-image {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 20px;
+
+    border: 6px solid var(--brown);
+}
+
+
+.digital-task-card h2 {
+    font-family: 'Arimo', sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    color: var(--brown);
+
+    margin-top: 30px;
+}
+
+
+/* ==========================================
+   SELF-ASSESSMENT
+========================================== */
+
+.assessment-section {
+    width: 100%;
+
+    min-height: 600px;
+}
+
+
+.assessment-card {
+    width: 100%;
+
+    background: var(--pink);
+
+    padding: 45px 60px 55px;
+
+    border-radius: 4px;
+
+    border: 3px solid rgba(91, 48, 53, 0.08);
+}
+
+
+.assessment-card h1 {
+    font-family: 'Caveat', cursive;
+
+    font-size: 72px;
+
+    font-weight: 500;
+
+    color: var(--brown);
+
+    margin-bottom: 25px;
+}
+
+
+.assessment-card h2 {
+    font-family: 'Caveat', cursive;
+
+    font-size: 52px;
+
+    font-weight: 600;
+
+    color: var(--brown);
+
+    margin: 30px 0;
+}
+
+
+.assessment-line {
+    width: 95%;
+
+    height: 5px;
+
+    background: var(--brown);
+
+    border-radius: 50%;
+
+    margin: 25px auto;
+
+    transform: rotate(-1deg);
+}
+
+
+.assessment-answer {
+    font-family: 'Caveat', cursive;
+
+    font-size: 32px;
+
+    line-height: 1.4;
+
+    color: var(--brown);
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    text-align: left;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .topbar {
+        height: 130px;
+    }
+
+
+    .nav-item {
+        font-size: 40px;
+
+        padding: 0 12px;
+    }
+
+
+    .page-content {
+        min-height: calc(100vh - 130px);
+
+        padding: 60px 7% 80px;
+    }
+
+
+    .profile-layout {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 50px;
+    }
+
+
+    .profile-info h1,
+    .tasks-section h1 {
+        font-size: 60px;
+    }
+
+
+    .school-item {
+        grid-template-columns: 220px 1fr;
+    }
+
+
+    .assessment-card {
+        padding: 40px;
+    }
+
+
+    .assessment-card h1 {
+        font-size: 60px;
+    }
+
+
+    .assessment-answer {
+        font-size: 29px;
+    }
+
+
+    .duck-decoration img {
+        width: 180px;
+    }
+
+}
+
+
+/* ==========================================
+   PHONE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: 100px;
+    }
+
+
+    .nav-item {
+        font-size: 25px;
+
+        padding: 0 7px;
+
+        border-right: 4px solid var(--brown);
+    }
+
+
+    .page-content {
+        min-height: calc(100vh - 100px);
+
+        padding: 45px 7% 70px;
+    }
+
+
+    .profile-layout {
+        gap: 35px;
+
+        padding-top: 10px;
+    }
+
+
+    .profile-picture {
+        width: 280px;
+        height: 280px;
+    }
+
+
+    .profile-info h1,
+    .tasks-section h1 {
+        font-size: 48px;
+    }
+
+
+    .info-label {
+        font-size: 23px;
+    }
+
+
+    .info-item p {
+        font-size: 20px;
+    }
+
+
+    .school-section h2 {
+        font-size: 43px;
+    }
+
+
+    .school-item {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        font-size: 19px;
+    }
+
+
+    .school-level {
+        font-size: 23px;
+    }
+
+
+    .digital-task-card h2 {
+        font-size: 21px;
+    }
+
+
+    .assessment-card {
+        padding: 30px 25px 35px;
+    }
+
+
+    .assessment-card h1 {
+        font-size: 50px;
+    }
+
+
+    .assessment-card h2 {
+        font-size: 40px;
+    }
+
+
+    .assessment-answer {
+        font-size: 25px;
+
+        line-height: 1.4;
+    }
+
+
+    .duck-decoration {
+        justify-content: center;
+
+        margin-top: 40px;
+
+        padding-right: 0;
+    }
+
+
+    .duck-decoration img {
+        width: 150px;
+    }
+
+}
